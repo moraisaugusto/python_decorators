@@ -1,2 +1,5 @@
-# python_decorators
-Set of examples for Python decorators 
+# Python Decorators
+Collection of Python decorators 
+
+
+1. timeout
