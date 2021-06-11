@@ -1,21 +1,28 @@
 #!/usr/bin/env python3
+"""Overloading example using multipledispatch"""
+
 from multipledispatch import dispatch
 
+
 @dispatch(int)
-def func(point):
-    print(f"Integer point: {point}")
+def func(param):
+    print(f"Integer point: {param}")
+
 
 @dispatch(float)
-def func(x):
-    print(f"Float point: {x}")
+def func(param):
+    print(f"Float point: {param}")
+
 
 @dispatch(int, int)
-def func(x, y):
-    print(f"Two integer points: {x, y}")
+def func(param_a, param_b):
+    print(f"Two integer points: {param_a, param_b}")
+
 
 @dispatch(object)
 def func(arg):
     print(f"Generic param: {arg}")
+
 
 func(1)
 func(1.0)

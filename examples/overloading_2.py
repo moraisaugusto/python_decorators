@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
+"""Overloading example using singledispatch"""
+
 from functools import singledispatch
 
 
 @singledispatch
 def func(arg):
+    """single function"""
     print(f"This is a generic call: {arg}")
 
 
